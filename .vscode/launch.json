@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Protobuf: generate Python stubs",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "grpc_tools.protoc",
+      "args": [
+        "-I",
+        "proto",
+        "--python_out=src",
+        "--pyi_out=src",
+        "--grpc_python_out=src",
+        "proto/autoforex/server/v1/trading_service.proto"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

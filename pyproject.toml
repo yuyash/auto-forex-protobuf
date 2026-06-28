@@ -1,0 +1,37 @@
+[project]
+name = "auto-forex-protobuf"
+version = "0.1.0"
+description = "gRPC protobuf contracts for AutoForexV2."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "grpcio>=1.81.1",
+    "protobuf>=6.33.5,<7",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.24,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "grpcio-tools>=1.81.1",
+    "ruff>=0.15.20",
+    "ty>=0.0.55",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "RUF", "UP"]
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+
+[tool.ty.environment]
+python-version = "3.14"

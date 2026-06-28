@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package autoforex.server.v1;
+
+service TradingService {
+  rpc GetHealth(HealthRequest) returns (HealthResponse);
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+  string status = 1;
+}
